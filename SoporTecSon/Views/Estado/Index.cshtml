@@ -1,0 +1,63 @@
+﻿@model IEnumerable<SopTecDLL.Entitites.Estado>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Estados</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table" >
+    
+    <tr>
+        <th>
+            No.
+        </th>
+        <th>
+            Nombre
+        </th>
+        <th>
+            Distritos
+        </th>
+        <th>
+            Creación
+        </th>
+        <th>
+            Activo
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach(var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.dttos)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.created)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.active)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.id }) |
+                @Html.ActionLink("Details", "Details", new { id = item.id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.id })
+            </td>
+        </tr>
+    }
+    <tr>
+        <td></td>
+        <td></td>
+        <td>@Model.Sum(x => x.dttos).ToString()</td>
+    </tr>
+
+</table>

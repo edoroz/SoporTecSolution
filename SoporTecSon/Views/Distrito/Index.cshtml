@@ -1,0 +1,67 @@
+﻿@model IEnumerable<SopTecDLL.Entitites.Distrito>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Distritos</h2>
+<div >
+   @Html.ActionLink("Create New", "Create")<h4 style="float:right">@ViewBag.estado</h4>
+    
+</div>
+
+<table class="table">
+    <tr>
+        <th style="text-align:left">
+            &nbsp;&nbsp;&nbsp;@Html.DisplayNameFor(model => model.name)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.dtto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.voc_ejec)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.voc_reg)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.created)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.active)
+        </th>
+        <th style="text-align:right">Admin&nbsp;&nbsp;&nbsp;</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td style="text-align:left">
+                @Html.DisplayFor(modelItem => item.name)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.dtto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.voc_ejec)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.voc_reg)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.created)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.active)
+            </td>
+            <td style="text-align:right">
+                @Html.ActionLink("Edit", "Edit", new { id = item.id }) |
+                @Html.ActionLink("Details", "Details", new { id = item.id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.id })
+            </td>
+        </tr>
+    }
+
+</table>

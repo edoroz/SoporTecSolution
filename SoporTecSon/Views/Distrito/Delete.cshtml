@@ -1,0 +1,80 @@
+﻿@model SopTecDLL.Entitites.Distrito
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Distrito</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.edo_id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.edo_id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dtto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dtto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.voc_ejec)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.voc_ejec)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.voc_reg)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.voc_reg)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.created)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.created)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.active)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.active)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

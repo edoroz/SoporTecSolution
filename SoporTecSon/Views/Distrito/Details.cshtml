@@ -1,0 +1,74 @@
+﻿@model SopTecDLL.Entitites.Distrito
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Distrito</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.edo_id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.edo_id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dtto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dtto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.voc_ejec)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.voc_ejec)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.voc_reg)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.voc_reg)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.created)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.created)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.active)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.active)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
